@@ -30,7 +30,7 @@ export default function SignupForm() {
       setError("");
       setLoading(true);
       await signup(email, password, username);
-      navigate("/quiz");
+      navigate("/");
     } catch (err) {
       console.log(err);
       setLoading(false);

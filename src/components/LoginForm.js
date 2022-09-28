@@ -13,7 +13,7 @@ export default function LoginForm() {
   const [loading, setLoading] = useState();
 
   const { login } = useAuth();
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -22,7 +22,7 @@ export default function LoginForm() {
       setError("");
       setLoading(true);
       await login(email, password);
-      history.push("/");
+      navigate("/");
     } catch (err) {
       console.log(err);
       setLoading(false);
