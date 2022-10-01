@@ -35,8 +35,8 @@ export default function useVideoList(page) {
         setLoading(false);
         if (snapshot.exists()) {
           console.log(snapshot.val());
-          setVideos((video) => {
-            return [...video, ...Object.values(snapshot.val())];
+          setVideos((prevVideos) => {
+            return [...prevVideos, ...Object.values(snapshot.val())];
           });
         } else {
           setHasMore(false);
