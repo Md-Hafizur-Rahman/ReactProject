@@ -80,11 +80,8 @@ export default function Quiz() {
       [id]: qna,
     });
 
-    navigate({
-      pathname: `/result/${id}`,
-      state: {
-        qna,
-      },
+    navigate(`/result/${id}`, {
+      state: { qna },
     });
   }
 
@@ -101,6 +98,7 @@ export default function Quiz() {
           <h1>{qna[currentQuestion].title}</h1>
           <h4>Question can have multiple answers</h4>
           <Answers
+            input
             options={qna[currentQuestion].options}
             handleChange={handleAnswerChange}
           />
@@ -110,7 +108,7 @@ export default function Quiz() {
             submit={submit}
             progress={percentage}
           />
-          <MiniPlayer />
+          <MiniPlayer id={id} title={qna[currentQuestion].title} />
         </>
       )}
     </>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo-bg.png";
+import logo from "../assets/images/98539031-islamic-mosque-logo-vector-icon-template.webp";
 import classes from "../styles/Nav.module.css";
 import Account from "./Account.js";
 export default function nav() {
@@ -9,7 +9,7 @@ export default function nav() {
         <li>
           <Link to="/" className={classes.brand}>
             <img src={logo} alt=" Logo" />
-            <h3>Learn React</h3>
+            <h3>Learn Yourself</h3>
           </Link>
         </li>
       </ul>
